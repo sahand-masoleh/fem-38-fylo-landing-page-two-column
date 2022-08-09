@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+  <title>Frontend Mentor | Fylo landing page with two column layout</title>
+</head>
+
+<body>
+  <div class="nav-wrapper">
+    <nav class="nav">
+      <div class="nav__logo image"><img src="./images/logo.svg" alt="Fylo Logo" class="image__img"></div>
+      <a href="#" class="nav__link">Features</a>
+      <a href="#" class="nav__link">Team</a>
+      <a href="#" class="nav__link">Sign In</a>
+    </nav>
+  </div>
+
+  <main class="main">
+    <div class="feature__wrapper feature__wrapper--top">
+      <article class="feature">
+        <div class="feature__content">
+          <h1 class="feature__title">All your files in one secure location, accessible anywhere.</h1>
+          <p class="feature__text">Fylo stores your most important files in one secure location. Access them wherever
+            you need, share and collaborate with friends, family, and co-workers.</p>
+          <form class="feature__signup signup">
+            <div class="signup__input-wrapper">
+              <input type="email" name="email" id="" placeholder="email@example.com">
+              <div class="signup__error">Please check you email</div>
+            </div>
+            <button class="signup__button">Get Started</button>
+          </form>
+        </div>
+        <div class="feature__image image">
+          <img src="./images/illustration-1.svg" alt="" class="image__img">
+        </div>
+      </article>
+    </div>
+
+    <div class="feature__wrapper feature__wrapper--bottom">
+      <article class="feature">
+        <div class="feature__content">
+          <h1 class="feature__title">Stay productive, wherever you are</h1>
+          <p class="feature__text">
+            Never let location be an issue when accessing your files. Fylo has you covered for all of your file storage
+            needs.
+          </p>
+          <p class="feature__text">
+            Securely share files and folders with friends, family and colleagues for live collaboration. No email
+            attachments required!
+          </p>
+          <a href="#" class="feature__link">See how Fylo works <div class="feature__icon image"><img
+                src="./images/icon-arrow.svg" alt="" class="image__img"></div>
+          </a>
+          <div class="feature__testimonial testimonial">
+            <div class="testimonial__icon image"><img src="./images/icon-quotes.svg" alt="" class="image__img"></div>
+            <p class="testimonial__text">
+              Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has
+              become a well-oiled collaboration machine.
+            </p>
+            <div class="testimonial__avatar image">
+              <img src="./images/avatar-testimonial.jpg" alt="avatar" class="image_img">
+            </div>
+            <p class="testimonial__user">
+              Kyle Burton
+            </p>
+            <p class="testimonial__position">
+              Founder & CEO, Huddle
+            </p>
+          </div>
+        </div>
+        <div class="feature__image image">
+          <img src="./images/illustration-2.svg" alt="" class="image__img">
+        </div>
+      </article>
+    </div>
+
+    <div class="cta">
+      <div class="cta__wrapper">
+        <div class="cta__content">
+          <h2 class="cta__title">
+            Get early access today
+          </h2>
+          <p class="cta__text">
+            It only takes a minute to sign up and our free starter tier is extremely generous. If you have any
+            questions,
+            our support team would be happy to help you.
+          </p>
+        </div>
+        <form class="cta__signup signup">
+          <div class="signup__input-wrapper">
+            <input type="email" name="email" id="" placeholder="email@example.com">
+            <div class="signup__error">Please check you email</div>
+          </div>
+          <button class="signup__button">Get Started For Free</button>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__wrapper">
+      <div class="footer__logo image"><img src="./images/logo.svg" alt="Fylo Logo" class="image__img"></div>
+      <ul>
+        <li class="footer__info">
+          <div class="footer__icon image">
+            <img src="./images/icon-phone.svg" alt="phone" class="image__img">
+            <p class="footer__text">Phone: +1-543-123-4567</p>
+          </div>
+        </li>
+        <li class="footer__info">
+          <div class="footer__icon image">
+            <img src="./images/icon-email.svg" alt="email" class="image__img">
+            <p class="footer__text">example@fylo.com</p>
+          </div>
+        </li>
+      </ul>
+      <ul class="footer__column">
+        <li class="footer__item">About Us</li>
+        <li class="footer__item">Jobs</li>
+        <li class="footer__item">Press</li>
+        <li class="footer__item">Blog</li>
+      </ul>
+      <ul class="footer__column">
+        <li class="footer__item">Contact Us</li>
+        <li class="footer__item">Terms</li>
+        <li class="footer__item">Privacy</li>
+      </ul>
+      <div class="footer__social-container">
+        <a href="#" class="footer__social image"><img src="./images/facebook.svg" alt="facebook" class="image__img"></a>
+        <a href="#" class="footer__social image"><img src="./images/twitter.svg" alt="twitter" class="image__img"></a>
+        <a href="#" class="footer__social image"><img src="./images/instagram.svg" alt="instagram"
+            class="image__img"></a>
+      </div>
+      <p class="footer__attribution">
+        Challenge by <a class="footer__link" href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend
+          Mentor</a>.
+        Coded by <a class="footer__link" href="#" target="_blank">Sahand Masoleh</a>.
+      </p>
+    </div>
+  </footer>
+</body>
+
+</html>
