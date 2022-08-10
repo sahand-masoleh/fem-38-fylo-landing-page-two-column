@@ -21,18 +21,19 @@
   </div>
 
   <main class="main">
-    <div class="feature__wrapper feature__wrapper--top">
+    <div class="feature-wrapper feature-wrapper--top">
       <article class="feature">
         <div class="feature__content">
           <h1 class="feature__title">All your files in one secure location, accessible anywhere.</h1>
           <p class="feature__text">Fylo stores your most important files in one secure location. Access them wherever
             you need, share and collaborate with friends, family, and co-workers.</p>
-          <form class="feature__signup signup">
-            <div class="signup__input-wrapper">
-              <input type="email" name="email" id="" placeholder="email@example.com">
-              <div class="signup__error">Please check you email</div>
+          <form class="feature__signup signup signup--top">
+            <div class="signup__input-wrapper signup__input-wrapper--top">
+              <input type="email" class="signup__input signup__input--top" name="email" id=""
+                placeholder="email@example.com">
+              <div class="signup__error signup__error--top" hidden>Please check your email</div>
             </div>
-            <button class="signup__button">Get Started</button>
+            <button class="signup__button signup__button--top">Get Started</button>
           </form>
         </div>
         <div class="feature__image image">
@@ -41,7 +42,7 @@
       </article>
     </div>
 
-    <div class="feature__wrapper feature__wrapper--bottom">
+    <div class="feature-wrapper feature-wrapper--bottom">
       <article class="feature">
         <div class="feature__content">
           <h1 class="feature__title">Stay productive, wherever you are</h1>
@@ -62,15 +63,17 @@
               Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has
               become a well-oiled collaboration machine.
             </p>
-            <div class="testimonial__avatar image">
-              <img src="./images/avatar-testimonial.jpg" alt="avatar" class="image_img">
+            <div class="testimonial__user">
+              <div class="testimonial__avatar image">
+                <img src="./images/avatar-testimonial.jpg" alt="avatar" class="image__img">
+              </div>
+              <p class="testimonial__name">
+                Kyle Burton
+              </p>
+              <p class="testimonial__position">
+                Founder & CEO, Huddle
+              </p>
             </div>
-            <p class="testimonial__user">
-              Kyle Burton
-            </p>
-            <p class="testimonial__position">
-              Founder & CEO, Huddle
-            </p>
           </div>
         </div>
         <div class="feature__image image">
@@ -79,8 +82,8 @@
       </article>
     </div>
 
-    <div class="cta">
-      <div class="cta__wrapper">
+    <div class="cta__wrapper">
+      <div class="cta">
         <div class="cta__content">
           <h2 class="cta__title">
             Get early access today
@@ -91,19 +94,20 @@
             our support team would be happy to help you.
           </p>
         </div>
-        <form class="cta__signup signup">
-          <div class="signup__input-wrapper">
-            <input type="email" name="email" id="" placeholder="email@example.com">
-            <div class="signup__error">Please check you email</div>
+        <form class="cta__signup signup signup--bottom">
+          <div class="signup__input-wrapper signup__input-wrapper--bottom">
+            <input type="email" class="signup__input signup__input--bottom" name="email" id=""
+              placeholder="email@example.com">
+            <div class="signup__error signup__error--bottom" hidden>Please check your email</div>
           </div>
-          <button class="signup__button">Get Started For Free</button>
+          <button class="signup__button signup__button--bottom">Get Started For Free</button>
         </form>
       </div>
     </div>
   </main>
 
-  <footer class="footer">
-    <div class="footer__wrapper">
+  <footer class="footer__wrapper">
+    <div class="footer">
       <div class="footer__logo image"><img src="./images/logo.svg" alt="Fylo Logo" class="image__img"></div>
       <ul>
         <li class="footer__info">
