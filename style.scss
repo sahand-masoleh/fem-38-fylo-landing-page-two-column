@@ -16,7 +16,8 @@ $c-n-light-gray: #bfbfbf;
 $max-width: 80rem;
 $pad: min(3rem, 10vw);
 
-$break-point: 480px;
+$break-point-1: 480px;
+$break-point-2: 768px;
 
 @mixin max-width($num: $max-width) {
 	max-width: $num;
@@ -55,7 +56,7 @@ $break-point: 480px;
 	justify-content: space-between;
 	gap: min(3rem, 5vw);
 
-	@media screen and (max-width: $break-point) {
+	@media screen and (max-width: $break-point-1) {
 		margin-top: 2rem;
 	}
 
@@ -63,7 +64,7 @@ $break-point: 480px;
 		height: 3rem;
 		margin-right: auto;
 
-		@media screen and (max-width: $break-point) {
+		@media screen and (max-width: $break-point-1) {
 			height: 1.5rem;
 		}
 	}
@@ -73,7 +74,7 @@ $break-point: 480px;
 		color: $c-p-desaturated-blue;
 		text-decoration: none;
 
-		@media screen and (max-width: $break-point) {
+		@media screen and (max-width: $break-point-1) {
 			font-size: 0.8rem;
 		}
 	}
@@ -85,7 +86,7 @@ $break-point: 480px;
 	&--top {
 		margin-bottom: 10rem;
 
-		@media screen and (max-width: $break-point) {
+		@media screen and (max-width: $break-point-1) {
 			margin-bottom: 2rem;
 		}
 	}
@@ -104,7 +105,7 @@ $break-point: 480px;
 			right: 0;
 			bottom: 100%;
 
-			@media screen and (max-width: $break-point) {
+			@media screen and (max-width: $break-point-2) {
 				background-image: url(./images/bg-curve-mobile.svg);
 				background-size: 100% 3rem;
 				height: 3rem;
@@ -120,7 +121,7 @@ $break-point: 480px;
 	align-items: center;
 	gap: min(3rem, 5vw);
 
-	@media screen and (max-width: $break-point) {
+	@media screen and (max-width: $break-point-2) {
 		display: flex;
 		flex-direction: column-reverse;
 		text-align: center;
@@ -134,11 +135,11 @@ $break-point: 480px;
 
 	&__title {
 		font-family: $ff-headings;
-		font-size: 2.4rem;
+		font-size: clamp(1.4rem, 3vw, 2.4rem);
 		color: $c-p-very-dark-blue;
 		line-height: 2.5ch;
 
-		@media screen and (max-width: $break-point) {
+		@media screen and (max-width: $break-point-2) {
 			&--top {
 				font-size: 1.4rem;
 			}
@@ -152,9 +153,10 @@ $break-point: 480px;
 	&__text {
 		font-family: $ff-body;
 		font-size: 1.2rem;
+		font-size: clamp(0.9rem, 2vw, 1.2rem);
 		color: $c-p-very-dark-blue;
 
-		@media screen and (max-width: $break-point) {
+		@media screen and (max-width: $break-point-2) {
 			&--top {
 				font-size: 0.9rem;
 			}
@@ -179,7 +181,7 @@ $break-point: 480px;
 		width: fit-content;
 		line-height: 2ch;
 
-		@media screen and (max-width: $break-point) {
+		@media screen and (max-width: $break-point-2) {
 			margin: 0 auto;
 			font-size: 0.7rem;
 			padding-bottom: 1ch;
@@ -213,7 +215,7 @@ $break-point: 480px;
 		min-height: inherit;
 		height: min-content;
 
-		@media screen and (max-width: $break-point) {
+		@media screen and (max-width: $break-point-1) {
 			max-width: unset;
 		}
 
@@ -238,6 +240,7 @@ $break-point: 480px;
 	&__input-wrapper {
 		position: relative;
 		min-height: inherit;
+		min-width: min(35ch, 100%);
 
 		&--top {
 			max-width: 100%;
@@ -304,9 +307,13 @@ $break-point: 480px;
 	&__text {
 		grid-column: 1/3;
 		font-family: $ff-body;
-		font-size: 0.9rem;
+		font-size: clamp(0.6rem, 2vw, 0.9rem);
 		line-height: 3ch;
 		color: $c-p-very-dark-blue;
+
+		@media screen and (max-width: $break-point-1) {
+			font-size: 0.9rem;
+		}
 	}
 
 	&__user {
@@ -349,7 +356,7 @@ $break-point: 480px;
 	align-items: start;
 	gap: 2rem;
 
-	@media screen and (max-width: $break-point) {
+	@media screen and (max-width: $break-point-1) {
 		display: flex;
 		flex-direction: column;
 		text-align: center;
@@ -366,7 +373,7 @@ $break-point: 480px;
 		font-size: 1.8rem;
 		color: $c-n-light-grayish-blue;
 
-		@media screen and (max-width: $break-point) {
+		@media screen and (max-width: $break-point-1) {
 			font-size: 1rem;
 		}
 	}
@@ -375,7 +382,7 @@ $break-point: 480px;
 		font-family: $ff-body;
 		color: $c-n-light-gray;
 
-		@media screen and (max-width: $break-point) {
+		@media screen and (max-width: $break-point-1) {
 			font-size: 0.9rem;
 		}
 	}
@@ -383,6 +390,7 @@ $break-point: 480px;
 
 .footer__wrapper {
 	padding: 4rem $pad;
+	padding-bottom: 2rem;
 	background-color: $c-p-very-dark-blue;
 }
 
@@ -398,7 +406,7 @@ $break-point: 480px;
 		grid-column: start / end;
 		height: 2.5rem;
 
-		@media screen and (max-width: $break-point) {
+		@media screen and (max-width: $break-point-1) {
 			height: 3rem;
 		}
 	}
@@ -415,6 +423,10 @@ $break-point: 480px;
 		display: flex;
 		align-items: center;
 		gap: 1rem;
+
+		@media screen and (max-width: $break-point-1) {
+			flex-wrap: wrap;
+		}
 	}
 
 	&__icon {
@@ -444,7 +456,7 @@ $break-point: 480px;
 		flex-wrap: wrap;
 		gap: 0.5rem;
 
-		@media screen and (max-width: $break-point) {
+		@media screen and (max-width: $break-point-1) {
 			justify-content: center;
 		}
 	}
@@ -460,7 +472,7 @@ $break-point: 480px;
 		display: grid;
 		place-items: center;
 
-		@media screen and (max-width: $break-point) {
+		@media screen and (max-width: $break-point-1) {
 			height: 0.8rem;
 			width: 0.8rem;
 			padding: 0.4rem;
@@ -484,11 +496,12 @@ $break-point: 480px;
 
 	&__attribution {
 		font-family: $ff-body;
+		font-size: 0.8rem;
 		color: $c-n-light-gray;
 		flex-basis: 100%;
 		grid-column: start / end;
 
-		@media screen and (max-width: $break-point) {
+		@media screen and (max-width: $break-point-1) {
 			font-size: 0.6rem;
 		}
 	}

@@ -85,7 +85,7 @@
   right: 0;
   bottom: 100%;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 768px) {
   .feature-wrapper--bottom::before {
     background-image: url(./images/bg-curve-mobile.svg);
     background-size: 100% 3rem;
@@ -101,7 +101,7 @@
   align-items: center;
   gap: min(3rem, 5vw);
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 768px) {
   .feature {
     display: flex;
     flex-direction: column-reverse;
@@ -115,11 +115,11 @@
 }
 .feature__title {
   font-family: "Raleway", sans-serif;
-  font-size: 2.4rem;
+  font-size: clamp(1.4rem, 3vw, 2.4rem);
   color: #070439;
   line-height: 2.5ch;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 768px) {
   .feature__title--top {
     font-size: 1.4rem;
   }
@@ -130,9 +130,10 @@
 .feature__text {
   font-family: "Open Sans", sans-serif;
   font-size: 1.2rem;
+  font-size: clamp(0.9rem, 2vw, 1.2rem);
   color: #070439;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 768px) {
   .feature__text--top {
     font-size: 0.9rem;
   }
@@ -155,7 +156,7 @@
   width: fit-content;
   line-height: 2ch;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 768px) {
   .feature__link {
     margin: 0 auto;
     font-size: 0.7rem;
@@ -213,6 +214,7 @@
 .signup__input-wrapper {
   position: relative;
   min-height: inherit;
+  min-width: min(35ch, 100%);
 }
 .signup__input-wrapper--top {
   max-width: 100%;
@@ -269,9 +271,14 @@
 .testimonial__text {
   grid-column: 1/3;
   font-family: "Open Sans", sans-serif;
-  font-size: 0.9rem;
+  font-size: clamp(0.6rem, 2vw, 0.9rem);
   line-height: 3ch;
   color: #070439;
+}
+@media screen and (max-width: 480px) {
+  .testimonial__text {
+    font-size: 0.9rem;
+  }
 }
 .testimonial__user {
   display: grid;
@@ -347,6 +354,7 @@
 
 .footer__wrapper {
   padding: 4rem min(3rem, 10vw);
+  padding-bottom: 2rem;
   background-color: #070439;
 }
 
@@ -379,6 +387,11 @@
   display: flex;
   align-items: center;
   gap: 1rem;
+}
+@media screen and (max-width: 480px) {
+  .footer__info {
+    flex-wrap: wrap;
+  }
 }
 .footer__icon {
   height: 1rem;
@@ -442,6 +455,7 @@
 }
 .footer__attribution {
   font-family: "Open Sans", sans-serif;
+  font-size: 0.8rem;
   color: #bfbfbf;
   flex-basis: 100%;
   grid-column: start/end;
