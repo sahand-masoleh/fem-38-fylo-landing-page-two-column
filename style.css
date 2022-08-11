@@ -173,6 +173,7 @@
   flex-wrap: wrap;
   min-height: 2.5rem;
   gap: 1rem;
+  row-gap: 1.5rem;
   align-items: flex-start;
 }
 .signup__button {
@@ -230,13 +231,17 @@
   border-radius: 0.25rem;
   outline: 1px solid #070439;
 }
-.signup__input:focus-visible {
+.signup__input:focus-visible:not(.signup__input--invalid) {
   outline: 2px solid #3065f8;
+}
+.signup__input--invalid {
+  outline: 2px solid red;
 }
 .signup__error {
   font-family: "Open Sans", sans-serif;
   font-size: 0.8rem;
-  line-height: 1rem;
+  line-height: 1.5rem;
+  position: absolute;
 }
 .signup__error--top {
   color: red;

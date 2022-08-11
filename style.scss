@@ -198,6 +198,7 @@ $break-point: 480px;
 	flex-wrap: wrap;
 	min-height: 2.5rem;
 	gap: 1rem;
+	row-gap: 1.5rem;
 	align-items: flex-start;
 
 	&__button {
@@ -258,15 +259,20 @@ $break-point: 480px;
 		border-radius: 0.25rem;
 		outline: 1px solid $c-p-very-dark-blue;
 
-		&:focus-visible {
+		&:focus-visible:not(&--invalid) {
 			outline: 2px solid $c-a-bright-blue;
+		}
+
+		&--invalid {
+			outline: 2px solid red;
 		}
 	}
 
 	&__error {
 		font-family: $ff-body;
 		font-size: 0.8rem;
-		line-height: 1rem;
+		line-height: 1.5rem;
+		position: absolute;
 
 		&--top {
 			color: red;
